@@ -1,22 +1,22 @@
 <template>
     <div id="app">
 
-        <header></header>
+        <banner></banner>
 
-        <content></content>
+        <mainContent></mainContent>
 
         <asideMenu></asideMenu>
 
         <transition name="show">
-            <Login v-if="isShowLogin"></Login>
+            <login v-if="isShowLogin"></login>
         </transition>
 
         <transition name="show">
-            <Info v-if="isShowInfo"></Info>
+            <info v-if="isShowInfo"></info>
         </transition>
 
         <transition name="show">
-            <Msg v-if="isShowMsg"></Msg>
+            <message v-if="isShowMsg"></message>
         </transition>
 
         <transition name="show">
@@ -30,9 +30,9 @@
 </template>
 
 <script>
-    import header from './components/header/header.vue'
-    import content from './components/content/content.vue'
-    import AsideMenu from './components/asideMenu/asideMenu.vue'
+    import banner from './components/banner/banner.vue'
+    import mainContent from './components/mainContent/mainContent.vue'
+    import asideMenu from './components/asideMenu/asideMenu.vue'
     import login from './components/login/login.vue'
     import info from './components/info/info.vue'
     import message from './components/message/message.vue'
@@ -42,8 +42,8 @@
     export default {
         name: 'app',
         components: {
-            header,
-            content,
+            banner,
+            mainContent,
             asideMenu,
             login,
             info,
@@ -70,10 +70,8 @@
         }
     }
 </script>
-
 <style lang="scss">
     @import './style/common.scss';
-
     #app {
         position: relative;
         width: 100%;
